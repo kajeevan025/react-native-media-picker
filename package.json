@@ -1,0 +1,39 @@
+{
+  "name": "react-native-media-picker",
+  "version": "1.0.0",
+  "description": "A React Native plugin to select both images and documents from the device storage.",
+  "main": "index.ts",
+  "author": "Jeevan K A",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/react-native-media-picker.git"
+  },
+  "keywords": [
+    "react-native",
+    "media-picker",
+    "image-picker",
+    "document-picker",
+    "file-picker"
+  ],
+  "dependencies": {
+    "react-native": "^0.71.0",
+    "react-native-documents": "^6.1.0",
+    "react-native-image-crop-picker": "^0.37.0",
+    "react-native-permissions": "^3.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "@types/react-native": "^0.71.0"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "build": "tsc"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
