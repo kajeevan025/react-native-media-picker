@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Permissions from "react-native-permissions";
 import ImagePicker from "react-native-image-crop-picker";
-import DocumentPicker from "react-native-documents";
+import { pick, types } from "@react-native-documents/picker";
 import { useMediaPickerContext } from "../context/MediaPickerContext";
 
 // Custom hook to handle media picking logic
@@ -29,29 +29,18 @@ export const useMediaPicker = () => {
   };
 
   // Handle document selection
-  const selectDocument = async (): Promise<void> => {
+  const selectSingleDocument = async (): Promise<void> => {
     try {
       const permissionStatus = await Permissions.request("storage");
       if (permissionStatus !== "granted") {
         alert("Permission Denied");
         return;
       }
-
-      const res = await DocumentPicker.pick({
-        type: [
-          DocumentPicker.types.pdf,
-          DocumentPicker.types.doc,
-          DocumentPicker.types.text,
-        ],
-      });
+      const res = await pick();
       setSelectedFile(res);
       setIsModalVisible(true);
     } catch (error) {
-      if (DocumentPicker.isCancel(error)) {
-        console.log("Document selection canceled");
-      } else {
-        console.error("Document selection error:", error);
-      }
+      console.error("Document selection error:", error);
     }
   };
 
@@ -60,5 +49,5 @@ export const useMediaPicker = () => {
     setIsModalVisible(false);
   };
 
-  return { selectImage, selectDocument, closePreview };
+  return { selectImage, selectSingleDocument, closePreview };
 };

@@ -3,3 +3,6 @@ node_modules/
 tests/
 .idea/
 .vscode/
+.yarn/
+yarn.lock
+npm-debug.log

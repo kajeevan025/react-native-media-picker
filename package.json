@@ -18,14 +18,15 @@
     "file-picker"
   ],
   "dependencies": {
+    "@react-native-documents/picker": "^10.1.1",
+    "@react-native-documents/viewer": "^1.0.0",
     "react-native": "^0.71.0",
-    "react-native-documents": "^6.1.0",
     "react-native-image-crop-picker": "^0.37.0",
     "react-native-permissions": "^3.5.0"
   },
   "devDependencies": {
-    "typescript": "^4.8.4",
-    "@types/react-native": "^0.71.0"
+    "@types/react-native": "^0.71.0",
+    "typescript": "^4.8.4"
   },
   "scripts": {
     "start": "react-native start",
