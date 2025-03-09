@@ -1,28 +1,27 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "lib": ["es6", "dom"],
-      "allowJs": true,
-      "jsx": "react-native",
-      "moduleResolution": "node",
-      "module": "commonjs",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "outDir": "./dist",
-      "baseUrl": "./src",
-      "paths": {
-        "@/*": ["src/*"]
-      }
-    },
-    "include": [
-      "src/**/*",
-      "tests/**/*"
-    ],
-    "exclude": [
-      "node_modules",
-      "dist"
-    ]
-  }
-  
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "allowJs": true,
+    "jsx": "react-native",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["*"]
+    }
+  },
+  "include": [
+    "index.ts",
+    "tests/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

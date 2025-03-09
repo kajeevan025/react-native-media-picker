@@ -1,8 +1,14 @@
 import React, { createContext, useContext, useState } from "react";
 import { Image } from "react-native";
-import { DocumentPickerResponse } from "react-native-documents";
+import { DocumentPickerResponse } from "@react-native-documents/picker";
 
-export type SelectedFile = Image | DocumentPickerResponse | null;
+type MediaType = {
+  uri: string;
+  type: string;
+  name: string;
+};
+
+export type SelectedFile = MediaType | Image | DocumentPickerResponse | null;
 
 interface MediaPickerContextProps {
   selectedFile: SelectedFile;
@@ -25,7 +31,13 @@ export const useMediaPickerContext = (): MediaPickerContextProps => {
   return context;
 };
 
-export const MediaPickerProvider: React.FC = ({ children }) => {
+interface MediaPickerProviderProps {
+  children: React.ReactNode;
+}
+
+export const MediaPickerProvider: React.FC<MediaPickerProviderProps> = ({
+  children,
+}) => {
   const [selectedFile, setSelectedFile] = useState<SelectedFile>(null);
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
 

@@ -1,11 +1,10 @@
 {
-  "name": "react-native-media-picker",
+  "name": "@kajeevan025/react-native-media-picker",
   "version": "1.0.0",
   "description": "A React Native plugin to select both images and documents from the device storage.",
   "main": "index.ts",
   "author": "Jeevan K A",
   "license": "MIT",
-  "private": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/kajeevan025/react-native-media-picker.git"

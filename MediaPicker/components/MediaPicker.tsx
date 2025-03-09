@@ -42,7 +42,7 @@ const MediaPicker: React.FC = () => {
             (selectedFile.mime === "image/jpeg" ||
               selectedFile.mime === "image/png") ? (
               <Image
-                source={{ uri: selectedFile?.path }}
+                source={{ uri: (selectedFile as any)?.path }}
                 style={styles.previewImage}
               />
             ) : (
