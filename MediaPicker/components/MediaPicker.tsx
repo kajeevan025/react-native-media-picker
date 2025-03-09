@@ -12,7 +12,7 @@ import { useMediaPicker } from "../hook/useMediaPicker";
 
 const MediaPicker: React.FC = () => {
   const { selectedFile, isModalVisible } = useMediaPickerContext();
-  const { selectImage, selectDocument, closePreview } = useMediaPicker();
+  const { selectImage, selectSingleDocument, closePreview } = useMediaPicker();
 
   return (
     <View style={styles.container}>
@@ -24,7 +24,7 @@ const MediaPicker: React.FC = () => {
       </TouchableOpacity>
 
       {/* Button to select document */}
-      <TouchableOpacity style={styles.button} onPress={selectDocument}>
+      <TouchableOpacity style={styles.button} onPress={selectSingleDocument}>
         <Text style={styles.buttonText}>Select Document</Text>
       </TouchableOpacity>
 
